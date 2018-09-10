@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Bully-Monster Slayer Game</title>
+	<script src="https://npmcdn.com/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="css/foundation.min.css">
+    <link rel="stylesheet" href="bully.css">
+</head>
+<body>
+<div id="game">
+
+<section class="row">
+
+	<!-- PLAYERS HEALTH BAR -->	
+	<div class="small-6 columns custom">
+		<!-- This is the Player Background Image which changes when a game begins -->
+		<div id="player" :class="{defeatedPlyr:continuePlay}"></div>
+		<h1 class="text-center">You - ({{ playerScore }})</h1>
+		<div class="healthStatusBar">
+			<div 
+			class="healthStatusBar text-center" 
+			style="background-color: #ff3300; margin: 0; padding:5px; color: #ffffff;" 
+			:style="{width: playersHealth + '%'}">
+				{{ playersHealth }}
+			</div>
+		</div>
+	</div >
+
+	<!-- BULLY'S HEALTH BAR -->	
+	<div class="small-6 columns custom">
+		<!-- This is the Bully Background Image which changes when a game begins -->
+		<div id="bully" :class="{defeatedBully:continuePlay}"></div>
+		<h1 class="text-center">Bully - ({{ bullyScore }})</h1>
+		<div class="healthStatusBar">
+			<div 
+			class="healthStatusBar text-center" 
+			style="background-color: #ff3300; margin: 0; padding:5px; color: #ffffff;" 
+			:style="{width: bullysHealth + '%'}">
+				{{ bullysHealth }}
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<section class="row controls" v-if="!continuePlay"> 
+	<div class="small-12 columns">
+		<button id="new-game" @click="fightBtn">FIGHT!</button>
+	</div>
+</section>
+
+<section class="row controls" v-else> 
+	<div class="small-12 columns">
+		<button id="attack" @click="attackBtn">ATTACK</button>
+		<button id="special-attack" @click="specialAttackBtn">SPECIAL ATTACK</button>
+		<button id="heal" @click="healBtn">HEAL</button>
+		<button id="quit" @click="quitBtn">QUIT</button>
+	</div>
+</section>
+
+<section class="row log" v-if="gameLog.length > 0">
+	<div class="small-12 columns">
+		<ul>
+			<li v-for="stats in gameLog" :class="{'player-turn': stats.player, 'monster-turn': !stats.player}">
+				{{ stats.text }}
+			</li>
+		</ul>
+	</div>
+</section>
+
+</div>
+
+<script type="text/javascript" src="bully.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,166 @@
+
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+	background: #0575E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+	background-color: #F8F8F8;
+}
+
+section {
+	background-color: #fff;
+
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.custom {
+	margin-bottom: 5%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -20px;
+    width: 50%;
+}
+
+.healthStatusBar {
+    width: 80%;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 25px;
+    background-color: #eee;
+    margin: auto;
+    transition: width 500ms;
+}
+
+.controls, .log {
+    margin-top: 30px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.turn {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.log ul {
+    list-style: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.log ul li {
+    margin: 5px;
+}
+
+.log ul .player-turn {
+    color: blue;
+    background-color: #e4e8ff;
+}
+
+.log ul .monster-turn {
+    color: red;
+    background-color: #ffc0c1;
+}
+
+button {
+    font-size: 20px;
+    background-color: #eee;
+    padding: 12px;
+    box-shadow: 0 1px 1px black;
+    margin: 10px;
+}
+
+#player {
+	width: 200px;
+	height: 275px;
+	margin: 0 auto;
+	background: url(img/player-lost.png) center no-repeat;
+	background-size: 100%;
+}
+
+#player.defeatedPlyr {
+	background: url(img/player.png) center no-repeat;
+	background-size: 100%;
+}
+
+
+#bully {
+	width: 200px;
+	height: 275px;
+	margin: 0 auto;
+	background: url(img/bully-lost.png) center no-repeat;
+	background-size: 100%;
+}
+
+#bully.defeatedBully {
+	background: url(img/bully.png) center no-repeat;
+	background-size: 100%;
+}
+
+#new-game {
+    background-color: #ff9900;
+    border-radius: 25px;
+}
+
+#new-game:hover {
+    background-color: #f7bc6d;
+}
+
+#attack {
+    background-color: #ff7367;
+    border-radius: 25px;
+}
+
+#attack:hover {
+    background-color: #ff3f43;
+}
+
+#special-attack {
+    background-color: #ffaf4f;
+    border-radius: 25px;
+}
+
+#special-attack:hover {
+    background-color: #ff9a2b;
+}
+
+#heal {
+    background-color: #aaffb0;
+    border-radius: 25px;
+}
+
+#heal:hover {
+    background-color: #76ff7e;
+}
+
+#quit {
+    background-color: #ffffff;
+    border-radius: 25px;
+}
+
+#quit:hover {
+    background-color: #c7c7c7;
+}
