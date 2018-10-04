@@ -1,4 +1,4 @@
-# my-app
+# James-Custom-Components
 
 ## Project setup
 ```
